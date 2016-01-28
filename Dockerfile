@@ -1,5 +1,5 @@
 FROM ubuntu:14.04
-RUN apt-get update &&\
+RUN apt-get update && \
 apt-get install -y pkg-config libopenblas-dev liblapack-dev git-core build-essential gfortran python-dev curl libfreetype6-dev libjpeg-dev libhdf5-dev liblzo2-dev libbz2-dev
 RUN curl https://bootstrap.pypa.io/get-pip.py | python
 RUN pip install cython
@@ -17,3 +17,4 @@ RUN pip install tables
 RUN curl https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.6.0-cp27-none-linux_x86_64.whl -o tf.whl && \
 pip install --upgrade tf.whl && \
 rm tf.whl
+pip install git+git://github.com/tensorflow/skflow.git
