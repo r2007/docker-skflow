@@ -6,8 +6,8 @@ RUN pip install cython
 RUN pip install numpy
 RUN pip install six
 RUN pip install pillow
-RUN pip install scikit-image
 RUN pip install scipy
+RUN pip install scikit-image
 RUN pip install scikit-learn
 RUN pip install matplotlib
 RUN pip install jupyter
