@@ -14,4 +14,6 @@ RUN pip install jupyter
 RUN pip install h5py
 RUN pip install pandas
 RUN pip install tables
-RUN pip install --upgrade https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.6.0-cp27-none-linux_x86_64.whl
+RUN curl https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.6.0-cp27-none-linux_x86_64.whl -o tf.whl && \
+pip install --upgrade tf.whl && \
+rm tf.whl
